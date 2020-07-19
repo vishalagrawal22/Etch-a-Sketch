@@ -1,3 +1,35 @@
+#button-container {
+    text-align: center;
+}
+
+body {
+    background-color: saddlebrown;
+}
+
 #clear {
-    border: 1px solid #000000;
+    font-size: 40px;
+    width: 960px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#base-area {
+    width: 960px;
+    height: 960px;
+    background-color: sienna;
+    padding: 20px;
+    margin: 0px auto;
+    margin-bottom: 40px;
+}
+
+.row {
+    margin: 0px auto;
+}
+
+.element {
+    display: inline-block;
+    border: 1px solid black;
 }
