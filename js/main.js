@@ -34,8 +34,10 @@ function createElement(elementNo) {
     element.style.width = `${Math.floor(CONTAINERSIZE / squaresPerSide) - 2}px`;
     element.style.backgroundColor = "#fff";
     element.addEventListener("mouseover", () => {
-        element.style.backgroundColor = "#000"
-        element.style.borderColor = "#fff"
+        let red = Math.ceil(Math.random() * 255); 
+        let green = Math.ceil(Math.random() * 255); 
+        let blue = Math.ceil(Math.random() * 255); 
+        element.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
     });
     return element;
 }
