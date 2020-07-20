@@ -34,13 +34,11 @@ function createElement(elementNo) {
     element.style.width = `${Math.floor(CONTAINERSIZE / squaresPerSide) - 2}px`;
     element.style.backgroundColor = "#fff";
     element.addEventListener("mouseover", () => {
-        console.log(element.style.backgroundColor);
         color = element.style.backgroundColor;
         let vals = color.substring(color.indexOf('(') + 1, color.length - 1).split(', ');
         let red = (vals[0] - 25.5) > 0 ? (vals[0] - 25.5) : 0;
         let green = (vals[1] - 25.5) > 0 ? (vals[1] - 25.5) : 0;
         let blue = (vals[2] - 25.5) > 0 ? (vals[2] - 25.5) : 0;
-        console.log(red, blue, green);
         element.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
     });
     return element;
