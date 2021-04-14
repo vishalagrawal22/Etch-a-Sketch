@@ -20,13 +20,13 @@ function createRow(rowNo) {
     row.style.height = `${Math.floor(CONTAINERSIZE / squaresPerSide)}px`;
     // Number Of Rows = Number Of Element Per Row as this is a square
     for (let elementNo = 1; elementNo <= squaresPerSide; elementNo++) {
-        let element = createElement(elementNo);
+        let element = createSquare(elementNo);
         row.appendChild(element);
     }
     return row;
 }
 
-function createElement(elementNo) {
+function createSquare(elementNo) {
     const element = document.createElement('div');
     element.id = `Element${elementNo}`;
     element.classList.add("element");
@@ -46,7 +46,7 @@ function removeOldGrid() {
 }
 
 function setSquaresPerSide() {
-    squaresPerSide = Number(prompt("How many squares you want per side?","16"));
+    squaresPerSide = Number(prompt("How many squares you want per side?", "16"));
 }
 
 function clearGrid() {
